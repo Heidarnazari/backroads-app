@@ -1,6 +1,7 @@
 :root {
   --clr-font-1: rgb(2, 255, 255);
   --clr-font-2: rgb(7, 197, 197);
+  --clr-deep-navy-0: #3c3f61;
   --clr-deep-navy: #000435;
   --clr-beige-0: #fdf7ef;
   --clr-beige: #e9dac4;
@@ -14,7 +15,7 @@
 }
 
 #foot-note {
-  background: var(--clr-deep-navy);
+  background: var(--clr-deep-navy-0);
   width: 100%;
   padding: 4rem;
 }
