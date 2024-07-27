@@ -1,0 +1,120 @@
+:root {
+  --clr-font-1: rgb(2, 255, 255);
+  --clr-font-2: rgb(7, 197, 197);
+  --clr-deep-navy: #000435;
+  --clr-beige-0: #fdf7ef;
+  --clr-beige: #e9dac4;
+  --clr-beige-1: #d5af77;
+  --clr-beige-2: #704503;
+  --clr-grey-1: grey;
+  --clr-grey-2: rgb(208, 207, 207);
+  --clr-white: white;
+  --transition: all 0.2s linear;
+  --shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+#tours {
+  padding: 4rem 2rem;
+}
+
+.tours-center {
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.tour-item {
+  width: 270px;
+  height: 370px;
+  border: solid 1px var(--clr-grey-2);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.tour-item:hover {
+  box-shadow: var(--shadow);
+  transform: scale(1.03);
+}
+
+.tour-item .tour-img-container {
+  height: 220px;
+  width: 100%;
+  position: relative;
+}
+
+.tour-item .tour-img-container .date {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background: var(--clr-beige);
+  padding: 0.2rem 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.tour-item .tour-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-item .tour-details {
+  position: relative;
+  height: calc(100% - 220px);
+  padding: 0.5rem 1rem;
+}
+
+.tour-item .tour-title {
+  color: var(--clr-beige-2);
+  text-transform: capitalize;
+  margin-bottom: 0.4rem;
+}
+
+.tour-item .tour-text {
+  color: var(--clr-grey-1);
+}
+
+.tour-item .tour-resolution {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  color: var(--clr-beige-2);
+  font-size: 0.8rem;
+}
+
+.tour-item .tour-resolution .price {
+  text-align: center;
+}
+.tour-item .tour-resolution .days {
+  text-align: end;
+}
+
+.tours-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tours-title span {
+  color: var(--clr-beige-1);
+}
+
+@media screen and (min-width: 600px) {
+  .tours-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .tours-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

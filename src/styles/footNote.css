@@ -1,0 +1,34 @@
+:root {
+  --clr-font-1: rgb(2, 255, 255);
+  --clr-font-2: rgb(7, 197, 197);
+  --clr-deep-navy: #000435;
+  --clr-beige-0: #fdf7ef;
+  --clr-beige: #e9dac4;
+  --clr-beige-1: #d5af77;
+  --clr-beige-2: #704503;
+  --clr-grey-1: grey;
+  --clr-grey-2: rgb(208, 207, 207);
+  --clr-white: white;
+  --transition: all 0.2s linear;
+  --shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+#foot-note {
+  background: var(--clr-deep-navy);
+  width: 100%;
+  padding: 4rem;
+}
+
+.foot-note-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.foot-note-center p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+}

@@ -1,0 +1,78 @@
+@import "./navbar.css";
+@import "./about.css";
+@import "./services.css";
+@import "./tours.css";
+@import "./footNote.css";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3.5rem;
+}
+
+:root {
+  --clr-font-1: rgb(2, 255, 255);
+  --clr-font-2: rgb(7, 197, 197);
+  --clr-deep-navy: #000435;
+  --clr-beige: #e9dac4;
+  --clr-white: white;
+  --transition: all 0.2s linear;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-center {
+  padding: 2rem;
+  max-width: 650px;
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.hero-title {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  margin-bottom: 1.5rem;
+}
+
+.hero-link {
+  color: var(--clr-white);
+  border: solid 1.5px var(--clr-white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  transition: var(--transition);
+}
+
+.hero-link:hover {
+  color: var(--clr-deep-navy);
+  background: var(--clr-beige);
+  border-color: var(--clr-beige);
+}

@@ -1,0 +1,156 @@
+@import "./fontawesome/css/all.css";
+
+:root {
+  --clr-font-1: rgb(2, 255, 255);
+  --clr-font-2: rgb(7, 197, 197);
+  --clr-deep-navy: #000435;
+  --clr-beige: #e9dac4;
+  --clr-beige-1: #d5af77;
+  --clr-beige-2: #704503;
+  --clr-white: white;
+  --transition: all 0.2s linear;
+  --shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background: var(--clr-white);
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.scrolling-navbar {
+  background: var(--clr-white);
+  box-shadow: var(--shadow);
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav-center .logo {
+  color: var(--clr-deep-navy);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-center .logo span {
+  color: var(--clr-beige-1);
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.section-links {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-white);
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: var(--clr-beige-1);
+}
+
+.nav-toggle-btn {
+  color: var(--clr-deep-navy);
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.nav-toggle-btn:hover {
+  cursor: pointer;
+  transform: rotateZ(90deg);
+}
+
+.nav-social-icons {
+  display: none;
+}
+
+.nav-menu-links {
+  padding-top: 0rem;
+  height: 0rem;
+  overflow-y: hidden;
+  transition: var(--transition);
+}
+
+.show-nav-menu-links {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav-menu-link {
+  padding: 0.5rem 0;
+}
+
+.nav-menu-link a {
+  color: var(--clr-deep-navy);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    background: transparent;
+  }
+
+  .navbar.scrolling-navbar {
+    background: var(--clr-white);
+  }
+
+  .scrolling-navbar.navbar .logo {
+    color: var(--clr-deep-navy);
+  }
+
+  .scrolling-navbar .nav-link {
+    color: var(--clr-deep-navy);
+  }
+
+  .nav-center .logo {
+    color: var(--clr-white);
+  }
+
+  .section-links {
+    display: flex;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .nav-social-icons {
+    display: flex;
+  }
+
+  .nav-menu-links {
+    height: 0rem;
+  }
+}
